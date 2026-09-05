@@ -72,7 +72,7 @@ docs/writeup.md         plain-language findings (Phase 6)
 - [x] Phase 3 — Segmentation (RFM → k-means → silhouette/gap statistic)
 - [x] Phase 4 — Churn analysis (Kaplan-Meier + Cox PH per segment)
 - [x] Phase 5 — Forecasting (decomposition → backtest → honest error)
-- [ ] Phase 6 — Dashboard & write-up
+- [x] Phase 6 — Dashboard & write-up
 
 Open questions, resolved during their relevant phase rather than fixed
 up front:
