@@ -1,4 +1,4 @@
-.PHONY: up down psql venv download load reset-db
+.PHONY: up down psql venv download load reset-db segment churn forecast dashboard all
 
 up:
 	docker compose up -d
@@ -25,3 +25,18 @@ download:
 
 load:
 	python3 -m scripts.ingest.load_to_postgres
+
+segment:
+	python3 -m scripts.segmentation.rfm_segmentation
+
+churn:
+	python3 -m scripts.churn.survival_analysis
+
+forecast:
+	python3 -m scripts.forecasting.sales_forecast
+
+dashboard:
+	python3 -m scripts.dashboard.export_dashboard_data
+
+## Full pipeline from raw data to dashboard inputs (assumes `make up` already ran)
+all: download load segment churn forecast dashboard
