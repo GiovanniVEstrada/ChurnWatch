@@ -1,0 +1,27 @@
+## Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+## Environment
+.env
+
+## Data (raw/processed data is regenerated from source, not versioned)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+## Postgres
+pgdata/
+
+## OS / editor
+.DS_Store
+.vscode/
+*.swp
+
+## Dashboard export/cache junk (keep the actual .pbix/.twbx file)
+*.pbix.bak

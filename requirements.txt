@@ -1,0 +1,19 @@
+# Data layer
+sqlalchemy>=2.0
+psycopg2-binary>=2.9
+python-dotenv>=1.0
+
+# Data acquisition / manipulation
+pandas>=2.2
+openpyxl>=3.1        # xlsx engine, source dataset ships as .xlsx
+numpy>=1.26
+
+# Analysis (phases 3-5)
+scikit-learn>=1.4     # segmentation: k-means, silhouette score
+lifelines>=0.29        # churn: Kaplan-Meier, Cox proportional hazards
+statsmodels>=0.14      # forecasting: decomposition, ARIMA/ETS
+
+# Notebooks / plotting
+jupyter>=1.0
+matplotlib>=3.8
+seaborn>=0.13
