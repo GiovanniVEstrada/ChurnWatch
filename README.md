@@ -67,7 +67,7 @@ docs/writeup.md         plain-language findings (Phase 6)
 ## Roadmap
 
 - [x] Phase 1 — Data ingestion & cleaning
-- [ ] Phase 2 — SQL exploration layer (RFM, per-period sales queries)
+- [x] Phase 2 — SQL exploration layer (RFM, per-period sales queries)
 - [ ] Phase 3 — Segmentation (RFM → k-means → silhouette/gap statistic)
 - [ ] Phase 4 — Churn analysis (Kaplan-Meier + Cox PH per segment)
 - [ ] Phase 5 — Forecasting (decomposition → backtest → honest error)
