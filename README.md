@@ -71,7 +71,7 @@ docs/writeup.md         plain-language findings (Phase 6)
 - [x] Phase 2 — SQL exploration layer (RFM, per-period sales queries)
 - [x] Phase 3 — Segmentation (RFM → k-means → silhouette/gap statistic)
 - [x] Phase 4 — Churn analysis (Kaplan-Meier + Cox PH per segment)
-- [ ] Phase 5 — Forecasting (decomposition → backtest → honest error)
+- [x] Phase 5 — Forecasting (decomposition → backtest → honest error)
 - [ ] Phase 6 — Dashboard & write-up
 
 Open questions, resolved during their relevant phase rather than fixed
@@ -79,8 +79,10 @@ up front:
 - Churn inactivity threshold: **135 days**, the 90th percentile of the
   actual per-customer purchase-interval distribution (see
   `scripts/churn/survival_analysis.py`) — not a guessed number.
-- Forecast granularity: still open, pending Phase 5's look at how noisy
-  the aggregated sales series is after decomposition.
+- Forecast granularity: **monthly** — weekly and monthly both decompose
+  very cleanly (residual noise fraction ~0.001 vs ~0.000), so monthly
+  was chosen as the marginally cleaner signal and the more natural
+  business cadence (see `scripts/forecasting/sales_forecast.py`).
 
 ## Out of scope
 

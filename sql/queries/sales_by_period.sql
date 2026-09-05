@@ -5,6 +5,11 @@
 -- guest checkouts with no Customer ID still count. Cancellations net
 -- naturally since their line_total is already negative (see rfm.sql
 -- for why that's true whether or not an invoice is 'C'-prefixed).
+--
+-- Note: the data ends 2011-12-09, so the last row (period = 2011-12-01)
+-- covers only 9 days, not a full month. scripts/forecasting/sales_forecast.py
+-- drops it before decomposition/backtesting for exactly this reason --
+-- any other consumer of this query (e.g. the dashboard) should too.
 
 select
     date_trunc('month', i.invoice_date)::date as period,
